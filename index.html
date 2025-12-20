@@ -160,6 +160,14 @@
             transition: all 0.3s ease;
             border-top: 5px solid #21a7ff;
         }
+        .club-card img.club-logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            border-radius: 10px;
+            margin: 0 auto 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
         .club-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
@@ -178,6 +186,19 @@
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             border-left: 5px solid #0b1958;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .achievement-item.arbiter-cert {
+            flex-direction: column;
+            text-align: center;
+        }
+        .achievement-item img.chess-kenya-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 10px;
         }
         .contact {
             background: linear-gradient(135deg, #0b1958, #21a7ff);
@@ -199,7 +220,7 @@
             text-decoration: none;
             padding: 1rem;
             border-radius: 10px;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
             font-size: 1.1rem;
         }
         .contact-link:hover {
@@ -218,6 +239,7 @@
             .school-card { flex-direction: column; text-align: center; }
             .school-logo { width: 100px; height: 100px; }
             .contact-links { flex-direction: column; align-items: center; gap: 1rem; }
+            .achievement-item { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -301,16 +323,17 @@
             <h2>Where Tonny Plays & Organizes</h2>
             <div class="clubs-grid">
                 <div class="club-card">
-                    <img src="https://res.cloudinary.com/dfmpym7ed/image/upload/v1766265557/MCC_h5gema.jpg" alt="Mombasa Chess Club" class="school-logo" style="width: 150px; height: 150px; margin: 0 auto 1rem;">
+                    <img src="https://res.cloudinary.com/dfmpym7ed/image/upload/v1766265557/MCC_h5gema.jpg" alt="Mombasa Chess Club" class="club-logo">
                     <h3>Mombasa Chess Club</h3>
                     <p>Core member fueling Coast region's premier chess scene.</p>
                 </div>
                 <div class="club-card">
+                    <img src="https://res.cloudinary.com/dfmpym7ed/image/upload/v1766265557/TUM_jtgahc.jpg" alt="Technical University of Mombasa" class="club-logo">
                     <h3>Technical University of Mombasa Chess Club</h3>
                     <p>Chief Tournament Organizer driving university chess dominance.</p>
                 </div>
                 <div class="club-card">
-                    <img src="https://res.cloudinary.com/dfmpym7ed/image/upload/v1766266620/BANDARI_w9soah.jpg" alt="Bandari Maritime Academy" class="school-logo" style="width: 150px; height: 150px; margin: 0 auto 1rem;">
+                    <img src="https://res.cloudinary.com/dfmpym7ed/image/upload/v1766266620/BANDARI_w9soah.jpg" alt="Bandari Maritime Academy" class="club-logo">
                     <h3>Bandari Maritime Academy Chess Club</h3>
                     <p>Strategic powerhouse representation.</p>
                 </div>
@@ -322,9 +345,12 @@
         <div class="container">
             <h2>Certified Chess Authority</h2>
             <div class="achievement-list">
-                <div class="achievement-item">
-                    <h3><i class="fas fa-certificate"></i> National Arbiter</h3>
-                    <p>Trained, certified, and licensed by Chess Kenya Federation.</p>
+                <div class="achievement-item arbiter-cert">
+                    <img src="https://res.cloudinary.com/dfmpym7ed/image/upload/v1766271031/CHESS_KENYA_krio3f.png" alt="Chess Kenya Federation" class="chess-kenya-logo">
+                    <div>
+                        <h3><i class="fas fa-certificate"></i> National Arbiter</h3>
+                        <p>Trained, certified, and licensed by Chess Kenya Federation.</p>
+                    </div>
                 </div>
                 <div class="achievement-item">
                     <h3><i class="fas fa-trophy"></i> Chief Arbiter Tournaments</h3>
@@ -363,6 +389,5 @@
     </footer>
 </body>
 </html>
-
 
         
