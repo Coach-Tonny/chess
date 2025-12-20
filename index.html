@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tonny Kithuku Kiamba - Master Chess Coach</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI4MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDgwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMGIxOTU4Ii8+PHBhdGggZD0iTTAsODAwIEwxMjAwLDAiIGZpbGw9InVybCgjZ3JhZCkiLz48L2RlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIxNThmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMTY4ZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9zdmc+') center/cover;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero-content .fide-id {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255,107,53,0.4);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,107,53,0.6);
+            background: #e55a2b;
+        }
+        section {
+            padding: 80px 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #0b1958;
+        }
+        .schools-grid, .clubs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .school-card, .club-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 5px solid #ff6b35;
+        }
+        .school-card:hover, .club-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .school-icon {
+            font-size: 3rem;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+        .achievements {
+            background: #f8f9ff;
+        }
+        .achievement-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        .achievement-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid #0b1958;
+        }
+        .contact {
+            background: linear-gradient(135deg, #0b1958, #21a7ff);
+            color: white;
+            text-align: center;
+        }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+        .contact-link:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        footer {
+            background: #0b1958;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content p { font-size: 1.1rem; }
+            .schools-grid, .clubs-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Tonny Kithuku Kiamba</h1>
+            <div class="fide-id">FIDE ID: 10844643</div>
+            <p>The life-of-the-party chess coach bringing positive energy, unrelenting optimism, and masterful training to players across Mombasa! Plays chess wherever, whenever – fueling the chess revolution on the Coast.</p>
+            <a href="#contact" class="cta-button">Train With Tonny Today!</a>
+        </div>
+    </section>
+
+    <section id="training">
+        <div class="container">
+            <h2>Where Tonny Trains Champions</h2>
+            <div class="schools-grid">
+                <div class="school-card">
+                    <div class="school-icon"><i class="fas fa-school"></i></div>
+                    <h3>Light International School</h3>
+                    <p>Building young chess minds with strategic brilliance.</p>
+                </div>
+                <div class="school-card">
+                    <div class="school-icon"><i class="fas fa-school"></i></div>
+                    <h3>Coast Academy</h3>
+                    <p>Coastal excellence through chess mastery.</p>
+                </div>
+                <div class="school-card">
+                    <div class="school-icon"><i class="fas fa-school"></i></div>
+                    <h3>Aga Khan Academy</h3>
+                    <p>Elite training for tomorrow's grandmasters.</p>
+                </div>
+                <div class="school-card">
+                    <div class="school-icon"><i class="fas fa-chess-board"></i></div>
+                    <h3>Mombasa Chess Academy</h3>
+                    <p>Outstanding coach leading weekend sessions at Khadija Comprehensive School.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clubs" class="achievements">
+        <div class="container">
+            <h2>Where Tonny Plays & Organizes</h2>
+            <div class="clubs-grid">
+                <div class="club-card">
+                    <div class="school-icon"><i class="fas fa-chess-knight"></i></div>
+                    <h3>Mombasa Chess Club</h3>
+                    <p>Core member fueling Coast region's premier chess scene.</p>
+                </div>
+                <div class="club-card">
+                    <div class="school-icon"><i class="fas fa-chess-knight"></i></div>
+                    <h3>Technical University of Mombasa Chess Club</h3>
+                    <p>Chief Tournament Organizer driving university chess dominance.</p>
+                </div>
+                <div class="club-card">
+                    <div class="school-icon"><i class="fas fa-chess-knight"></i></div>
+                    <h3>Bandari Maritime Academy Chess Club</h3>
+                    <p>Strategic powerhouse representation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="credentials">
+        <div class="container">
+            <h2>Certified Chess Authority</h2>
+            <div class="achievement-list">
+                <div class="achievement-item">
+                    <h3><i class="fas fa-certificate"></i> National Arbiter</h3>
+                    <p>Trained, certified, and licensed by Chess Kenya Federation.</p>
+                </div>
+                <div class="achievement-item">
+                    <h3><i class="fas fa-trophy"></i> Chief Arbiter Tournaments</h3>
+                    <ul>
+                        <li>Kilifi Open Chess Tournament 2025 [web:11][web:12]</li>
+                        <li>Coast Classics Junior Chess Tournament [web:2]</li>
+                        <li>Amani Blitz & Beats Chess Festival 2025 [web:17]</li>
+                        <li>East Africa Junior Chess Championship 2025 [web:15]</li>
+                        <li>Mombasa Chess Club Monthly Rated [web:14]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Join Tonny's Chess Revolution!</h2>
+            <p>Ready to level up your game? Contact the Coast's most energetic chess coach today.</p>
+            <div class="contact-links">
+                <a href="tel:+2547xxxxxxxx" class="contact-link"><i class="fas fa-phone"></i> Call Tonny</a>
+                <a href="mailto:tonnykiamba@example.com" class="contact-link"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://lichess.org/@/tonnykiamba" class="contact-link"><i class="fab fa-chess-knight"></i> Lichess</a>
+                <a href="#training" class="contact-link"><i class="fas fa-calendar"></i> Book Session</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tonny Kithuku Kiamba | FIDE 10844643 | Coast Chess Champion Coach [web:1][web:9]</p>
+        </div>
+    </footer>
+</body>
+</html>
